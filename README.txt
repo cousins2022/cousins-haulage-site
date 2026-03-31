@@ -53,4 +53,4 @@ OPTIONAL NEXT STEP
 - Set up Google Search Console
 - Submit your domain for indexing
 - Set up Google Business Profile
-update
+updated
