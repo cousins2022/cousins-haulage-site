@@ -3,17 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="7xGiDczGv2fto6d-SLr99WoicNty-QHFpKdwhRJxyr0" />
+  <meta name="google-site-verification" content="7xGiDczGv2fto6d-SLr99WoicNty-QHFpKdwhRJxyr0">
   <title>Cousins Haulage Ltd | Refrigerated Courier UK</title>
   <meta name="description" content="Cousins Haulage Ltd provides reliable refrigerated courier services across the UK. Temperature-controlled delivery for food, pharmaceuticals, and sensitive goods.">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #ffffff;
       color: #111111;
       line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
     }
 
     .container {
@@ -24,7 +42,7 @@
 
     header {
       background: #111111;
-      color: white;
+      color: #ffffff;
       padding: 20px 0;
       border-bottom: 4px solid #c9a227;
       text-align: center;
@@ -32,7 +50,8 @@
 
     header img {
       height: 80px;
-      max-width: 100%;
+      width: auto;
+      margin: 0 auto;
     }
 
     .tagline {
@@ -49,7 +68,7 @@
     }
 
     nav a {
-      color: white;
+      color: #ffffff;
       text-decoration: none;
       padding: 12px 18px;
       display: inline-block;
@@ -63,350 +82,328 @@
 
     .hero {
       background: url('/20230612_201147.jpg') center/cover no-repeat;
-      padding: 100px 0;
-      color: white;
+      color: #ffffff;
       text-align: center;
     }
 
     .hero-overlay {
       background: rgba(0, 0, 0, 0.6);
-      padding: 40px 20px;
+      padding: 100px 20px;
     }
 
     .hero h1 {
-      font-size: 42px;
-      margin-bottom: 15px;
+      margin: 0 0 15px;
+      font-size: 2.5rem;
     }
 
     .hero p {
-      font-size: 20px;
       max-width: 800px;
-      margin: 20px auto;
+      margin: 0 auto 20px;
+      font-size: 1.1rem;
     }
 
-    .buttons {
+    .hero-buttons {
       margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
-    .buttons a {
+    .hero-buttons a {
       display: inline-block;
+      padding: 12px 20px;
       text-decoration: none;
       font-weight: bold;
-      padding: 14px 22px;
       border-radius: 6px;
-      margin-right: 10px;
-      margin-bottom: 10px;
     }
 
-    .btn-gold {
+    .btn-primary {
       background: #c9a227;
       color: #111111;
     }
 
-    .btn-dark {
-      background: #111111;
-      color: #ffffff;
+    .btn-secondary {
+      background: #ffffff;
+      color: #111111;
     }
 
     main {
       padding: 40px 0;
     }
 
+    section {
+      margin-bottom: 40px;
+    }
+
     h2 {
-      margin-top: 35px;
-      font-size: 32px;
+      margin-top: 0;
+      color: #111111;
     }
 
     ul {
-      padding-left: 22px;
+      padding-left: 20px;
     }
 
-    .locations a {
-      display: block;
-      margin-bottom: 10px;
-      color: #0a58ca;
+    .content-box {
+      background: #f8f8f8;
+      border: 1px solid #e5e5e5;
+      border-radius: 10px;
+      padding: 24px;
+      margin-bottom: 30px;
+    }
+
+    .cta-box {
+      background: #111111;
+      color: #ffffff;
+      padding: 25px;
+      text-align: center;
+      margin: 40px 0;
+      border-radius: 10px;
+    }
+
+    .cta-box h2 {
+      color: #ffffff;
+      margin-top: 0;
+    }
+
+    .cta-box a {
+      display: inline-block;
+      background: #c9a227;
+      color: #111111;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .award-box {
+      background: #fff8df;
+      border: 1px solid #ead28a;
+      border-radius: 10px;
+      padding: 24px;
+      margin: 40px 0;
+    }
+
+    .testimonial-box {
+      background: #f8f8f8;
+      border-left: 4px solid #c9a227;
+      padding: 18px 20px;
+      margin-bottom: 16px;
+      border-radius: 6px;
+    }
+
+    .locations {
+      margin: 40px 0;
+    }
+
+    .location-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .location-links a {
+      background: #f8f8f8;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 14px 16px;
       text-decoration: none;
       font-weight: bold;
     }
 
-    .locations a:hover {
-      text-decoration: underline;
-    }
-
-    .award-box,
-    .testimonial-box {
-      background: #f8f5ea;
-      padding: 20px;
-      border-left: 5px solid #c9a227;
-      margin-top: 30px;
-      margin-bottom: 20px;
+    .location-links a:hover {
+      background: #fff8df;
     }
 
     .contact-box {
-      background: #111111;
-      color: #ffffff;
-      padding: 25px;
+      background: #f8f8f8;
       border-radius: 10px;
-      margin-top: 40px;
-    }
-
-    .contact-box h2 {
-      margin-top: 0;
-      color: #ffffff;
+      padding: 24px;
+      margin: 40px 0 20px;
+      border: 1px solid #e5e5e5;
     }
 
     footer {
       background: #111111;
-      color: white;
+      color: #ffffff;
       text-align: center;
-      padding: 20px 0;
-      margin-top: 40px;
-      font-size: 14px;
+      padding: 24px 20px;
+    }
+
+    .sticky-call {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 999;
+      background: #25d366;
+      color: #ffffff;
+      padding: 14px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
     @media (max-width: 768px) {
       .hero h1 {
-        font-size: 34px;
+        font-size: 2rem;
       }
 
-      .hero p {
-        font-size: 18px;
+      .hero-overlay {
+        padding: 70px 20px;
+      }
+
+      .location-links {
+        grid-template-columns: 1fr;
       }
 
       nav a {
         padding: 10px 12px;
-        font-size: 14px;
       }
     }
   </style>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Cousins Haulage Ltd",
-  "image": "https://cousinshaulageltd.co.uk/logo.png",
-  "telephone": "+447549870107",
-  "email": "cousinshaulage2022@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Shropshire",
-    "addressCountry": "UK"
-  },
-  "areaServed": "United Kingdom",
-  "url": "https://cousinshaulageltd.co.uk"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Cousins Haulage Ltd",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "3"
-  }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Do you offer same day refrigerated courier?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we provide fast same day refrigerated courier services across the UK for urgent deliveries."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What temperatures can you transport?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We handle chilled, frozen and ambient temperature-controlled deliveries depending on your requirements."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which areas do you cover?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We are based in Shropshire and cover the entire UK including London, Birmingham, Manchester, Bristol, Leeds and Liverpool."
-      }
-    }
-  ]
-}
-</script>
-
-
 </head>
+<body>
 
-<a href="tel:07549870107" class="call-now">📞 Call Now</a>
-
-<style>
-.call-now {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#c9a227;
-  color:#111;
-  padding:15px 20px;
-  font-weight:bold;
-  text-decoration:none;
-  border-radius:50px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.3);
-  z-index:999;
-}
-</style>
-  
-  <body>
-
-<header>
-  <div class="container">
-    <img src="/logo.png" alt="Cousins Haulage Ltd">
-    <p class="tagline">Refrigerated Courier Services | Same Day Delivery | UK & Europe</p>
-
-    <nav>
-      <a href="/">Home</a>
-     <a href="/about.html">About</a>
-      <a href="/refrigerated-courier-uk.html">UK</a>
-      <a href="/refrigerated-courier-london.html">London</a>
-      <a href="/refrigerated-courier-birmingham.html">Birmingham</a>
-      <a href="/refrigerated-courier-manchester.html">Manchester</a>
-    <a href="/refrigerated-courier-bristol.html">Bristol</a>
-<a href="/refrigerated-courier-leeds.html">Leeds</a>
-<a href="/refrigerated-courier-liverpool.html">Liverpool</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="hero-overlay">
+  <header>
     <div class="container">
-      <h1>Refrigerated Courier UK</h1>
-      <p>
-        Professional refrigerated courier services across the UK. Same day delivery for chilled, frozen and temperature-sensitive goods.
-      </p>
+      <img src="/YOUR-LOGO.png" alt="Cousins Haulage Ltd logo">
+      <div class="tagline">Reliable Refrigerated Courier Services Across the UK</div>
 
-      <div class="buttons">
-        <a class="btn-gold" href="tel:07549870107">Call Now</a>
-        <a class="btn-dark" href="mailto:cousinshaulage2022@gmail.com">Email for Quote</a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/refrigerated-courier-uk.html">UK Courier</a>
+        <a href="/pharmaceutical-courier-uk.html">Pharmaceutical</a>
+        <a href="/same-day-refrigerated-courier.html">Same Day</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="container">
+        <h1>Refrigerated Courier Services Across the UK</h1>
+        <p>
+          Cousins Haulage Ltd provides dedicated refrigerated, frozen and ambient transport for food,
+          pharmaceuticals and time-sensitive goods across the UK.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="tel:07549870107" class="btn-primary">Call Now</a>
+          <a href="mailto:cousinshaulage2022@gmail.com" class="btn-secondary">Email Us</a>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<main class="container">
-
-  <h2>Temperature Controlled Delivery</h2>
-  <p>
-    We provide refrigerated, frozen and ambient temperature-controlled courier services, ensuring your goods are transported at the correct temperature at all times with onboard temperature logging systems.
-  </p>
-
-  <h2>Same Day Courier Service</h2>
-  <p>
-    We offer multidrop, next day or same day courier services across the UK for urgent deliveries.
-  </p>
-
-<p>
-👉 <strong><a href="/pharmaceutical-courier-uk.html">Pharmaceutical Courier UK – Temperature Controlled Medical Delivery</a></strong>
-</p>
-
-<p>👉 <strong><a href="/same-day-refrigerated-courier.html">Same Day Refrigerated Courier – Urgent Temperature Controlled Delivery</a></strong></p>
-
-<p>👉 <strong><a href="/same-day-refrigerated-courier-birmingham.html">Same Day Refrigerated Courier Birmingham</a></strong></p>
-
-  <p>👉 <strong><a href="/same-day-refrigerated-courier-manchester.html">Same Day Refrigerated Courier Manchester</a></strong></p>
-  
-  <p>👉 <strong><a href="/same-day-refrigerated-courier-london.html">Same Day Refrigerated Courier London</a></strong></p>
- 
-  
-  <h2>Why Choose Us?</h2>
-  <ul>
-    <li>Available 7 days a week</li>
-    <li>Fully insured temperature-controlled vehicles</li>
-    <li>Dedicated UK-wide delivery</li>
-    <li>Reliable and professional service</li>
-  </ul>
-
-<div style="background:#111; color:#fff; padding:25px; text-align:center; margin:40px 0; border-radius:10px;">
-<h2>Need Urgent Refrigerated Delivery?</h2>
-<p>We offer fast same day courier services across the UK so if we cant get to you soon enough we have access to many subcontractors across the UK to give you more options.</p>
-<a href="tel:07549870107" style="background:#c9a227; color:#111; padding:12px 20px; text-decoration:none; font-weight:bold; border-radius:5px;">
-Call or whatsapp Now 
-
-
-</a>
-</div>
-  
- <p>👉 <a href="/about.html">About Cousins Haulage Ltd</a></p>
-  
-  <div class="award-box">
-    <h2>🏆 Award Winning Service</h2>
-    <p>
-      Cousins Haulage Ltd is proud to have been awarded <strong>Owner Driver of the Year 2024</strong>, recognising our commitment to reliability and professionalism in refrigerated transport.
-    </p>
-  </div>
-
- <h2>Our Services</h2>
-
-  <p><strong>Available 7 days a week</strong></p>
-<p>👉 <a href="/refrigerated-food-transport-uk.html">Refrigerated Food Transport UK</a></p>
-<p>👉 <a href="/pharmaceutical-courier-uk.html">Pharmaceutical Courier UK – Temperature Controlled Medical Delivery</a></p>
-  
-  <section style="margin-top:40px;">
-    <h2>The proof is in the pudding !</h2>
-
-    <div class="testimonial-box">
-      <p>"I've used this company many times and i can vouch for their reliability, they're respectful professional and the time keeping is perfect. great company all round."</p>
-      <p><strong>–S edwards Ltd</strong></p>
-    </div>
-
-    <div class="testimonial-box">
-      <p>"Chris and his team are fantastic to work with no job has ever been an issue. Great service."</p>
-      <p><strong>– Leon Ldj</strong></p>
-    </div>
-
-    <div class="testimonial-box">
-      <p>"regularly cover multidrop chilled delivery for us and they handle it perfectly every time."</p>
-      <p><strong>–Rich, country Fresh</strong></p>
     </div>
   </section>
 
-  <div class="locations">
- 
-    
-    <h2>Our Locations</h2>
+  <main class="container">
 
-  <a href="/refrigerated-courier-uk.html">Refrigerated Courier UK</a>
-  <a href="/refrigerated-courier-london.html">Refrigerated Courier London</a>
-  <a href="/refrigerated-courier-birmingham.html">Refrigerated Courier Birmingham</a>
-  <a href="/refrigerated-courier-manchester.html">Refrigerated Courier Manchester</a>
+    <section class="content-box">
+      <h2>Temperature Controlled Delivery</h2>
+      <p>
+        We provide refrigerated, frozen and ambient temperature-controlled courier services, ensuring your goods are transported at the correct temperature at all times with onboard temperature logging systems.
+      </p>
+    </section>
 
-  <a href="/refrigerated-courier-bristol.html">Refrigerated Courier Bristol</a>
-  <a href="/refrigerated-courier-leeds.html">Refrigerated Courier Leeds</a>
-  <a href="/refrigerated-courier-liverpool.html">Refrigerated Courier Liverpool</a>
-</div>
-  </div>
+    <section class="content-box">
+      <h2>Same Day Courier Service</h2>
+      <p>
+        We offer multidrop, next day and same day courier services across the UK for urgent deliveries.
+      </p>
+    </section>
 
-  <div class="contact-box">
-    <h2>Contact Cousins Haulage Ltd</h2>
-    <p><strong>Phone:</strong> 07549 870107</p>
-    <p><strong>Email:</strong> cousinshaulage2022@gmail.com</p>
-    <p><strong>Base:</strong> Shropshire – covering the UK & Europe</p>
-    <p><strong>Need a refrigerated courier?</strong> Call now or email for a fast quote.</p>
-  </div>
+    <section>
+      <p>👉 <strong><a href="/pharmaceutical-courier-uk.html">Pharmaceutical Courier UK – Temperature Controlled Medical Delivery</a></strong></p>
+      <p>👉 <strong><a href="/same-day-refrigerated-courier.html">Same Day Refrigerated Courier – Urgent Temperature Controlled Delivery</a></strong></p>
+      <p>👉 <strong><a href="/same-day-refrigerated-courier-birmingham.html">Same Day Refrigerated Courier Birmingham</a></strong></p>
+      <p>👉 <strong><a href="/same-day-refrigerated-courier-manchester.html">Same Day Refrigerated Courier Manchester</a></strong></p>
+      <p>👉 <strong><a href="/same-day-refrigerated-courier-london.html">Same Day Refrigerated Courier London</a></strong></p>
+    </section>
 
-</main>
+    <section>
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>Available 7 days a week</li>
+        <li>Fully insured temperature-controlled vehicles</li>
+        <li>Dedicated UK-wide delivery</li>
+        <li>Reliable and professional service</li>
+      </ul>
+    </section>
 
-<footer>
-  <p>© Cousins Haulage Ltd | Refrigerated Courier Services UK</p>
-</footer>
+    <div class="cta-box">
+      <h2>Need Urgent Refrigerated Delivery?</h2>
+      <p>
+        We offer fast same day courier services across the UK, and if we cannot get to you soon enough we have access to trusted subcontractors across the UK to give you more options.
+      </p>
+      <a href="tel:07549870107">Call or WhatsApp Now</a>
+    </div>
+
+    <p>👉 <a href="/about.html"><strong>About Cousins Haulage Ltd</strong></a></p>
+
+    <div class="award-box">
+      <h2>🏆 Award Winning Service</h2>
+      <p>
+        Cousins Haulage Ltd is proud to have been awarded <strong>Owner Driver of the Year 2024</strong>, recognising our commitment to reliability and professionalism in refrigerated transport.
+      </p>
+    </div>
+
+    <section>
+      <h2>Our Services</h2>
+      <p><strong>Available 7 days a week</strong></p>
+      <p>👉 <a href="/refrigerated-food-transport-uk.html">Refrigerated Food Transport UK</a></p>
+      <p>👉 <a href="/pharmaceutical-courier-uk.html">Pharmaceutical Courier UK – Temperature Controlled Medical Delivery</a></p>
+    </section>
+
+    <section>
+      <h2>The proof is in the pudding!</h2>
+
+      <div class="testimonial-box">
+        <p>"I've used this company many times and I can vouch for their reliability, they're respectful, professional and the time keeping is perfect. Great company all round."</p>
+        <p><strong>– S Edwards Ltd</strong></p>
+      </div>
+
+      <div class="testimonial-box">
+        <p>"Chris and his team are fantastic to work with. No job has ever been an issue. Great service."</p>
+        <p><strong>– Leon Ldj</strong></p>
+      </div>
+
+      <div class="testimonial-box">
+        <p>"Regularly cover multidrop chilled delivery for us and they handle it perfectly every time."</p>
+        <p><strong>– Rich, Country Fresh</strong></p>
+      </div>
+    </section>
+
+    <section class="locations">
+      <h2>Our Locations</h2>
+      <div class="location-links">
+        <a href="/refrigerated-courier-uk.html">Refrigerated Courier UK</a>
+        <a href="/refrigerated-courier-london.html">Refrigerated Courier London</a>
+        <a href="/refrigerated-courier-birmingham.html">Refrigerated Courier Birmingham</a>
+        <a href="/refrigerated-courier-manchester.html">Refrigerated Courier Manchester</a>
+        <a href="/refrigerated-courier-bristol.html">Refrigerated Courier Bristol</a>
+        <a href="/refrigerated-courier-leeds.html">Refrigerated Courier Leeds</a>
+        <a href="/refrigerated-courier-liverpool.html">Refrigerated Courier Liverpool</a>
+      </div>
+    </section>
+
+    <div class="contact-box">
+      <h2>Contact Cousins Haulage Ltd</h2>
+      <p><strong>Phone:</strong> <a href="tel:07549870107">07549 870107</a></p>
+      <p><strong>Email:</strong> <a href="mailto:cousinshaulage2022@gmail.com">cousinshaulage2022@gmail.com</a></p>
+      <p><strong>Base:</strong> Shropshire – covering the UK &amp; Europe</p>
+      <p><strong>Need a refrigerated courier?</strong> Call now or email for a fast quote.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© Cousins Haulage Ltd | Refrigerated Courier Services UK</p>
+  </footer>
+
+  <a class="sticky-call" href="tel:07549870107">Call Now</a>
 
 </body>
 </html>
