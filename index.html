@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -93,7 +93,7 @@
 
     .hero h1 {
       margin: 0 0 15px;
-      font-size: 2.5rem;
+      font-size: 2.6rem;
     }
 
     .hero p {
@@ -128,12 +128,26 @@
       color: #111111;
     }
 
+    .trust-strip {
+      background: #c9a227;
+      color: #111111;
+      padding: 14px 0;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      text-align: center;
+      font-weight: bold;
+    }
+
     main {
-      padding: 40px 0;
+      padding: 50px 0 40px;
     }
 
     section {
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
 
     h2 {
@@ -141,24 +155,56 @@
       color: #111111;
     }
 
+    h3 {
+      margin-top: 0;
+    }
+
     ul {
       padding-left: 20px;
     }
 
-    .content-box {
+    .section-intro {
+      max-width: 760px;
+      margin-bottom: 25px;
+    }
+
+    .services-overview h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .services-overview .section-intro {
+      text-align: center;
+      margin: 0 auto 30px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
       background: #f8f8f8;
       border: 1px solid #e5e5e5;
       border-radius: 10px;
       padding: 24px;
-      margin-bottom: 30px;
+    }
+
+    .service-card p {
+      margin-bottom: 15px;
+    }
+
+    .service-card a {
+      font-weight: bold;
+      text-decoration: none;
     }
 
     .cta-box {
       background: #111111;
       color: #ffffff;
-      padding: 25px;
+      padding: 30px;
       text-align: center;
-      margin: 40px 0;
       border-radius: 10px;
     }
 
@@ -183,7 +229,19 @@
       border: 1px solid #ead28a;
       border-radius: 10px;
       padding: 24px;
-      margin: 40px 0;
+    }
+
+    .why-us-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .why-card {
+      background: #f8f8f8;
+      border: 1px solid #e5e5e5;
+      border-radius: 10px;
+      padding: 20px;
     }
 
     .testimonial-box {
@@ -192,10 +250,6 @@
       padding: 18px 20px;
       margin-bottom: 16px;
       border-radius: 6px;
-    }
-
-    .locations {
-      margin: 40px 0;
     }
 
     .location-links {
@@ -217,11 +271,19 @@
       background: #fff8df;
     }
 
+    .service-links-list p {
+      margin: 10px 0;
+    }
+
+    .service-links-list a {
+      font-weight: bold;
+      text-decoration: none;
+    }
+
     .contact-box {
       background: #f8f8f8;
       border-radius: 10px;
       padding: 24px;
-      margin: 40px 0 20px;
       border: 1px solid #e5e5e5;
     }
 
@@ -255,6 +317,9 @@
         padding: 70px 20px;
       }
 
+      .trust-grid,
+      .services-grid,
+      .why-us-grid,
       .location-links {
         grid-template-columns: 1fr;
       }
@@ -269,8 +334,8 @@
 
   <header>
     <div class="container">
-      <img src="/logo.png" alt="Cousins Haulage Ltd logo">
-      <div class="tagline">Reliable Refrigerated Courier Services Across the UK & Europe</div>
+      <img src="/your-logo.png" alt="Cousins Haulage Ltd logo">
+      <div class="tagline">Reliable Refrigerated Courier Services Across the UK</div>
 
       <nav>
         <a href="/">Home</a>
@@ -287,8 +352,8 @@
       <div class="container">
         <h1>Refrigerated Courier Services Across the UK</h1>
         <p>
-          Cousins Haulage Ltd provides dedicated and direct refrigerated, frozen and ambient transport for food,
-          pharmaceuticals, composites and time-sensitive goods across the UK.
+          Cousins Haulage Ltd provides dedicated chilled, frozen and ambient transport
+          for food, pharmaceutical and time-sensitive deliveries across the UK.
         </p>
 
         <div class="hero-buttons">
@@ -299,62 +364,116 @@
     </div>
   </section>
 
+  <section class="trust-strip">
+    <div class="container trust-grid">
+      <div>Available 7 Days a Week</div>
+      <div>Fully Insured Vehicles</div>
+      <div>UK-Wide Delivery</div>
+      <div>Chilled, Frozen &amp; Ambient</div>
+    </div>
+  </section>
+
   <main class="container">
 
-    <section class="content-box">
-      <h2>Temperature Controlled Delivery</h2>
-      <p>
-        We provide refrigerated, frozen and ambient temperature-controlled courier services, ensuring your goods are transported at the correct temperature at all times with onboard temperature logging systems.
+    <section class="services-overview">
+      <h2>Our Core Services</h2>
+      <p class="section-intro">
+        We provide temperature-controlled courier services for businesses that need reliable,
+        professional transport across the UK, including urgent and same day delivery options.
       </p>
-    </section>
 
-    <section class="content-box">
-      <h2>Same Day Courier Service</h2>
-      <p>
-        We offer multidrop, next day and same day courier services across the UK for urgent deliveries.
-      </p>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Temperature Controlled Delivery</h3>
+          <p>
+            Refrigerated, frozen and ambient courier services with careful handling and
+            onboard temperature monitoring throughout transport.
+          </p>
+          <a href="/refrigerated-courier-uk.html">Learn more about refrigerated courier services</a>
+        </div>
+
+        <div class="service-card">
+          <h3>Same Day Courier</h3>
+          <p>
+            Urgent same day and next day transport across the UK for time-sensitive business deliveries.
+          </p>
+          <a href="/same-day-refrigerated-courier.html">View same day refrigerated courier service</a>
+        </div>
+
+        <div class="service-card">
+          <h3>Pharmaceutical Courier</h3>
+          <p>
+            Specialist medical and pharmaceutical transport for temperature-sensitive items
+            and urgent consignments.
+          </p>
+          <a href="/pharmaceutical-courier-uk.html">See pharmaceutical courier details</a>
+        </div>
+
+        <div class="service-card">
+          <h3>Refrigerated Food Transport</h3>
+          <p>
+            Reliable chilled transport for food producers, wholesalers, caterers and supply businesses.
+          </p>
+          <a href="/refrigerated-food-transport-uk.html">Explore refrigerated food transport</a>
+        </div>
+      </div>
     </section>
 
     <section>
-      <p>👉 <strong><a href="/pharmaceutical-courier-uk.html">Pharmaceutical Courier UK – Temperature Controlled Medical Delivery</a></strong></p>
-      <p>👉 <strong><a href="/same-day-refrigerated-courier.html">Same Day Refrigerated Courier – Urgent Temperature Controlled Delivery</a></strong></p>
-      <p>👉 <strong><a href="/same-day-refrigerated-courier-birmingham.html">Same Day Refrigerated Courier Birmingham</a></strong></p>
-      <p>👉 <strong><a href="/same-day-refrigerated-courier-manchester.html">Same Day Refrigerated Courier Manchester</a></strong></p>
-      <p>👉 <strong><a href="/same-day-refrigerated-courier-london.html">Same Day Refrigerated Courier London</a></strong></p>
+      <div class="cta-box">
+        <h2>Need Urgent Refrigerated Delivery?</h2>
+        <p>
+          We offer fast same day courier services across the UK, and if we cannot get to you soon enough
+          we also have access to trusted subcontractors across the UK to give you more options.
+        </p>
+        <a href="tel:07549870107">Call or WhatsApp Now</a>
+      </div>
     </section>
 
     <section>
-      <h2>Why Choose Us?</h2>
-      <ul>
-        <li>Available 7 days a week</li>
-        <li>Fully insured temperature-controlled vehicles</li>
-        <li>Dedicated UK-wide delivery</li>
-        <li>Reliable and professional service</li>
-      </ul>
+      <h2>Why Choose Cousins Haulage Ltd?</h2>
+      <div class="why-us-grid">
+        <div class="why-card">
+          <h3>Reliable Service</h3>
+          <p>We focus on professional, dependable delivery with careful handling and strong communication.</p>
+        </div>
+
+        <div class="why-card">
+          <h3>Temperature Controlled Vehicles</h3>
+          <p>Our vehicles are equipped for chilled, frozen and ambient transport to suit different goods.</p>
+        </div>
+
+        <div class="why-card">
+          <h3>Available 7 Days a Week</h3>
+          <p>We help businesses with urgent, planned and repeat deliveries throughout the week.</p>
+        </div>
+
+        <div class="why-card">
+          <h3>UK-Wide Coverage</h3>
+          <p>Based in Shropshire and operating across the UK, with additional support options when needed.</p>
+        </div>
+      </div>
     </section>
 
-    <div class="cta-box">
-      <h2>Need Urgent Refrigerated Delivery?</h2>
-      <p>
-        We offer fast same day courier services across the UK, and if we cannot get to you soon enough we have access to trusted subcontractors across the UK to give you more options.
-      </p>
-      <a href="tel:07549870107">Call or WhatsApp Now</a>
-    </div>
-
-    <p>👉 <a href="/about.html"><strong>About Cousins Haulage Ltd</strong></a></p>
-
-    <div class="award-box">
-      <h2>🏆 Award Winning Service</h2>
-      <p>
-        Cousins Haulage Ltd is proud to have been awarded <strong>Owner Driver of the Year 2024</strong>, recognising our commitment to reliability and professionalism in refrigerated transport.
-      </p>
-    </div>
+    <section>
+      <div class="award-box">
+        <h2>🏆 Award Winning Service</h2>
+        <p>
+          Cousins Haulage Ltd is proud to have been awarded <strong>Owner Driver of the Year 2024</strong>,
+          recognising our commitment to reliability and professionalism in refrigerated transport.
+        </p>
+      </div>
+    </section>
 
     <section>
-      <h2>Our Services</h2>
-      <p><strong>Available 7 days a week</strong></p>
-      <p>👉 <a href="/refrigerated-food-transport-uk.html">Refrigerated Food Transport UK</a></p>
-      <p>👉 <a href="/pharmaceutical-courier-uk.html">Pharmaceutical Courier UK – Temperature Controlled Medical Delivery</a></p>
+      <h2>Popular Service Pages</h2>
+      <div class="service-links-list">
+        <p>👉 <a href="/pharmaceutical-courier-uk.html">Pharmaceutical Courier UK – Temperature Controlled Medical Delivery</a></p>
+        <p>👉 <a href="/same-day-refrigerated-courier.html">Same Day Refrigerated Courier – Urgent Temperature Controlled Delivery</a></p>
+        <p>👉 <a href="/same-day-refrigerated-courier-birmingham.html">Same Day Refrigerated Courier Birmingham</a></p>
+        <p>👉 <a href="/same-day-refrigerated-courier-manchester.html">Same Day Refrigerated Courier Manchester</a></p>
+        <p>👉 <a href="/same-day-refrigerated-courier-london.html">Same Day Refrigerated Courier London</a></p>
+      </div>
     </section>
 
     <section>
@@ -376,7 +495,7 @@
       </div>
     </section>
 
-    <section class="locations">
+    <section>
       <h2>Our Locations</h2>
       <div class="location-links">
         <a href="/refrigerated-courier-uk.html">Refrigerated Courier UK</a>
@@ -389,13 +508,20 @@
       </div>
     </section>
 
-    <div class="contact-box">
-      <h2>Contact Cousins Haulage Ltd</h2>
-      <p><strong>Phone:</strong> <a href="tel:07549870107">07549 870107</a></p>
-      <p><strong>Email:</strong> <a href="mailto:cousinshaulage2022@gmail.com">cousinshaulage2022@gmail.com</a></p>
-      <p><strong>Base:</strong> Shropshire – covering the UK &amp; Europe</p>
-      <p><strong>Need a refrigerated courier?</strong> Call now or email for a fast quote.</p>
-    </div>
+    <section>
+      <h2>More About Us</h2>
+      <p>👉 <a href="/about.html"><strong>About Cousins Haulage Ltd</strong></a></p>
+    </section>
+
+    <section>
+      <div class="contact-box">
+        <h2>Contact Cousins Haulage Ltd</h2>
+        <p><strong>Phone:</strong> <a href="tel:07549870107">07549 870107</a></p>
+        <p><strong>Email:</strong> <a href="mailto:cousinshaulage2022@gmail.com">cousinshaulage2022@gmail.com</a></p>
+        <p><strong>Base:</strong> Shropshire – covering the UK &amp; Europe</p>
+        <p><strong>Need a refrigerated courier?</strong> Call now or email for a fast quote.</p>
+      </div>
+    </section>
 
   </main>
 
