@@ -1,0 +1,83 @@
+<section class="quote-section">
+  <div class="quote-wrap">
+
+    <div class="quote-copy">
+      <h2>Get a Fast Haulage Quote</h2>
+      <p>Enter your delivery details and we’ll get back to you quickly with a price.</p>
+
+      <div class="quote-trust">
+        <div>✓ Chilled, frozen & ambient transport</div>
+        <div>✓ UK-wide pallet delivery</div>
+        <div>✓ Fast response</div>
+      </div>
+
+      <a class="quote-call" href="tel:07549870107">Need it moved now? Call us</a>
+    </div>
+
+    <form class="quote-form" action="/quote-request" method="post">
+      <div class="form-grid">
+
+        <!-- Postcodes -->
+        <div class="form-group">
+          <label>Collection postcode</label>
+          <input type="text" name="collection_postcode" placeholder="e.g. B23 6RS" required>
+        </div>
+
+        <div class="form-group">
+          <label>Delivery postcode</label>
+          <input type="text" name="delivery_postcode" placeholder="e.g. M1 4BT" required>
+        </div>
+
+        <!-- Temperature Type -->
+        <div class="form-group full-width">
+          <label>Transport type</label>
+          <div class="radio-group">
+            <label><input type="radio" name="temp_type" value="ambient" required> Ambient</label>
+            <label><input type="radio" name="temp_type" value="chilled"> Chilled</label>
+            <label><input type="radio" name="temp_type" value="frozen"> Frozen</label>
+          </div>
+        </div>
+
+        <!-- Pallets + Weight -->
+        <div class="form-group">
+          <label>Number of pallets</label>
+          <input type="number" name="pallets" placeholder="e.g. 4" min="1" required>
+        </div>
+
+        <div class="form-group">
+          <label>Total estimated weight (kg)</label>
+          <input type="number" name="weight" placeholder="e.g. 800" required>
+        </div>
+
+        <!-- Dimensions -->
+        <div class="form-group full-width">
+          <label>Dimensions (L x W x H)</label>
+          <input type="text" name="dimensions" placeholder="e.g. 120cm x 100cm x 150cm">
+        </div>
+
+        <!-- Contact Info -->
+        <div class="form-group">
+          <label>Company name</label>
+          <input type="text" name="company_name" placeholder="Company name" required>
+        </div>
+
+        <div class="form-group">
+          <label>Phone number</label>
+          <input type="tel" name="phone" placeholder="Phone number" required>
+        </div>
+
+        <div class="form-group full-width">
+          <label>Email address</label>
+          <input type="email" name="email" placeholder="Email address" required>
+        </div>
+
+        <!-- Submit -->
+        <div class="form-group full-width">
+          <button type="submit" class="quote-btn">Get a Fast Quote</button>
+          <p class="form-note">Fast response from Cousins Haulage Ltd. Same day and scheduled deliveries available.</p>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</section>
