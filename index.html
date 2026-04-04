@@ -531,5 +531,30 @@
 
   <a class="sticky-call" href="tel:07549870107">Call Now</a>
 
+<a class="sticky-call" href="tel:07549870107">Call Now</a>
+
+<script>
+document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+  el.addEventListener('click', function() {
+    gtag('event', 'phone_click', {
+      event_category: 'engagement',
+      event_label: el.href
+    });
+  });
+});
+
+document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+  el.addEventListener('click', function() {
+    gtag('event', 'email_click', {
+      event_category: 'engagement',
+      event_label: el.href
+    });
+  });
+});
+</script>
+
+</body>
+</html>
+
 </body>
 </html>
