@@ -1,18 +1,21 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RPRWZG0KCS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RPRWZG0KCS');
+  </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RPRWZG0KCS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="7xGiDczGv2fto6d-SLr99WoicNty-QHFpKdwhRJxyr0">
+  <title>Cousins Haulage Ltd | Refrigerated Courier UK</title>
+  <meta name="description" content="Cousins Haulage Ltd provides reliable refrigerated courier services across the UK. Temperature-controlled delivery for food, pharmaceuticals, and sensitive goods.">
 
-  gtag('config', 'G-RPRWZG0KCS');
-
-</script>
-  
   <style>
     * {
       box-sizing: border-box;
@@ -20,6 +23,11 @@
 
     html {
       scroll-behavior: smooth;
+    }
+
+    html,
+    body {
+      overflow-x: hidden;
     }
 
     body {
@@ -30,7 +38,9 @@
       line-height: 1.6;
     }
 
-    img {
+    img,
+    video,
+    iframe {
       max-width: 100%;
       height: auto;
       display: block;
@@ -69,16 +79,24 @@
     nav {
       background: #111111;
       border-top: 1px solid #333333;
-      text-align: center;
       margin-top: 15px;
+    }
+
+    nav .nav-inner {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 10px 12px;
     }
 
     nav a {
       color: #ffffff;
       text-decoration: none;
-      padding: 12px 18px;
+      padding: 10px 14px;
       display: inline-block;
       font-weight: bold;
+      border-radius: 6px;
     }
 
     nav a:hover {
@@ -100,6 +118,7 @@
     .hero h1 {
       margin: 0 0 15px;
       font-size: 2.6rem;
+      line-height: 1.2;
     }
 
     .hero p {
@@ -171,17 +190,13 @@
 
     .section-intro {
       max-width: 760px;
-      margin-bottom: 25px;
+      margin: 0 auto 25px;
+      text-align: center;
     }
 
     .services-overview h2 {
       text-align: center;
       margin-bottom: 10px;
-    }
-
-    .services-overview .section-intro {
-      text-align: center;
-      margin: 0 auto 30px;
     }
 
     .services-grid {
@@ -271,6 +286,7 @@
       padding: 14px 16px;
       text-decoration: none;
       font-weight: bold;
+      word-break: break-word;
     }
 
     .location-links a:hover {
@@ -284,6 +300,7 @@
     .service-links-list a {
       font-weight: bold;
       text-decoration: none;
+      word-break: break-word;
     }
 
     .contact-box {
@@ -312,15 +329,35 @@
       text-decoration: none;
       font-weight: bold;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      max-width: calc(100vw - 24px);
     }
 
     @media (max-width: 768px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .hero-overlay {
+        padding: 60px 16px;
+      }
+
       .hero h1 {
         font-size: 2rem;
       }
 
-      .hero-overlay {
-        padding: 70px 20px;
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-buttons a {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
       }
 
       .trust-grid,
@@ -330,8 +367,11 @@
         grid-template-columns: 1fr;
       }
 
-      nav a {
-        padding: 10px 12px;
+      .sticky-call {
+        right: 12px;
+        bottom: 12px;
+        padding: 12px 16px;
+        font-size: 14px;
       }
     }
   </style>
@@ -340,15 +380,17 @@
 
   <header>
     <div class="container">
-      <img src="/logo.png" alt="Cousins Haulage Ltd logo">
+      <img src="/your-logo.png" alt="Cousins Haulage Ltd logo">
       <div class="tagline">Reliable Refrigerated Courier Services Across the UK</div>
 
       <nav>
-        <a href="/">Home</a>
-        <a href="/about.html">About</a>
-        <a href="/refrigerated-courier-uk.html">UK Courier</a>
-        <a href="/pharmaceutical-courier-uk.html">Pharmaceutical</a>
-        <a href="/same-day-refrigerated-courier.html">Same Day</a>
+        <div class="nav-inner">
+          <a href="/">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/refrigerated-courier-uk.html">UK Courier</a>
+          <a href="/pharmaceutical-courier-uk.html">Pharmaceutical</a>
+          <a href="/same-day-refrigerated-courier.html">Same Day</a>
+        </div>
       </nav>
     </div>
   </header>
@@ -537,30 +579,25 @@
 
   <a class="sticky-call" href="tel:07549870107">Call Now</a>
 
-<a class="sticky-call" href="tel:07549870107">Call Now</a>
-
-<script>
-document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
-  el.addEventListener('click', function() {
-    gtag('event', 'phone_click', {
-      event_category: 'engagement',
-      event_label: el.href
+  <script>
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        gtag('event', 'phone_click', {
+          event_category: 'engagement',
+          event_label: el.href
+        });
+      });
     });
-  });
-});
 
-document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
-  el.addEventListener('click', function() {
-    gtag('event', 'email_click', {
-      event_category: 'engagement',
-      event_label: el.href
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        gtag('event', 'email_click', {
+          event_category: 'engagement',
+          event_label: el.href
+        });
+      });
     });
-  });
-});
-</script>
-
-</body>
-</html>
+  </script>
 
 </body>
 </html>
